@@ -13,3 +13,7 @@ extra-deps:
   - regex-base-0.94.0.2@sha256:3a76c313f9f75e8e0b3c103c1bff5bbaf754da30cbddedc1d5b7061d001030e0
   - regex-tdfa-1.3.2.2@sha256:cdf462f6280804baa264e42e3e328ba02ec71d9335de706f3dee778890a25c0e,7042
   - splitmix-0.1.0.4@sha256:714a55fd28d3e2533bd5b49e74f604ef8e5d7b06f249c8816f6c54aed431dcf1,6483
+  - iri-0.5.1.1
+  # For iri
+  - text-builder-1.0.0.3
+  - text-builder-core-0.1.1.1

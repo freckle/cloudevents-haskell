@@ -1,1 +1,3 @@
-README.lhs
+# CloudEvents Haskell
+
+Unofficial SDK for the CloudEvents specification
