@@ -1,1 +1,7 @@
-resolver: nightly-2024-07-02
+resolver: nightly-2025-05-08
+
+extra-deps:
+  - iri-0.5.1.1
+  # For iri
+  - text-builder-1.0.0.3
+  - text-builder-core-0.1.1.1
