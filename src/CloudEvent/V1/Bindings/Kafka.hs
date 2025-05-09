@@ -20,7 +20,7 @@ import Data.Text (Text)
 import Data.Text.Encoding (encodeUtf8)
 import GHC.Generics (Generic)
 import Iri.Rendering.Text (iri)
-import Kafka.Producer.Types
+import Kafka.Producer
   ( ProducePartition (UnassignedPartition)
   , ProducerRecord (..)
   , TopicName
