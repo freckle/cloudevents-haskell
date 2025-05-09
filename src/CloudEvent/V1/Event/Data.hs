@@ -19,7 +19,7 @@ module CloudEvent.V1.Event.Data
 import Prelude
 
 import Autodocodec (HasCodec)
-import CloudEvent.V1.Orphans (TypeableCodec)
+import CloudEvent.V1.Orphans
 import Data.Aeson (FromJSON, ToJSON)
 import Data.Binary (Binary)
 import Data.Data (Typeable)
