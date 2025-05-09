@@ -6,14 +6,12 @@
     "id": {
       "description": "Identifies the event.",
       "$ref": "#/definitions/iddef",
-      "examples": [
-        "A234-1234-1234"
-      ]
+      "examples": ["A234-1234-1234"]
     },
     "source": {
       "description": "Identifies the context in which an event happened.",
       "$ref": "#/definitions/sourcedef",
-      "examples" : [
+      "examples": [
         "https://github.com/cloudevents",
         "mailto:cncf-wg-serverless@lists.cncf.io",
         "urn:uuid:6e8bc430-9c3a-11d9-9669-0800200c9a66",
@@ -25,14 +23,12 @@
     "specversion": {
       "description": "The version of the CloudEvents specification which the event uses.",
       "$ref": "#/definitions/specversiondef",
-      "examples": [
-        "1.0"
-      ]
+      "examples": ["1.0"]
     },
     "type": {
       "description": "Describes the type of event related to the originating occurrence.",
       "$ref": "#/definitions/typedef",
-      "examples" : [
+      "examples": [
         "com.github.pull_request.opened",
         "com.example.object.deleted.v2"
       ]
@@ -54,30 +50,22 @@
     "subject": {
       "description": "Describes the subject of the event in the context of the event producer (identified by source).",
       "$ref": "#/definitions/subjectdef",
-      "examples": [
-        "mynewfile.jpg"
-      ]
+      "examples": ["mynewfile.jpg"]
     },
     "time": {
       "description": "Timestamp of when the occurrence happened. Must adhere to RFC 3339.",
       "$ref": "#/definitions/timedef",
-      "examples": [
-        "2018-04-05T17:31:00Z"
-      ]
+      "examples": ["2018-04-05T17:31:00Z"]
     },
     "data": {
       "description": "The event payload.",
       "$ref": "#/definitions/datadef",
-      "examples": [
-        "<much wow=\"xml\"/>"
-      ]
+      "examples": ["<much wow=\"xml\"/>"]
     },
     "data_base64": {
       "description": "Base64 encoded event payload. Must adhere to RFC4648.",
       "$ref": "#/definitions/data_base64def",
-      "examples": [
-        "Zm9vYg=="
-      ]
+      "examples": ["Zm9vYg=="]
     }
   },
   "required": ["id", "source", "specversion", "type"],
