@@ -28,7 +28,7 @@ import Data.Generics.Product.Fields (HasField (..), HasField' (..))
 import Data.Row
 import Data.Row.Records qualified as Rec
 import Data.Text (Text)
-import Data.Time (UTCTime)
+-- import Data.Time (UTCTime)
 import GHC.Generics (Generic)
 import Iri.Data (Iri)
 
@@ -104,20 +104,20 @@ deriving newtype instance
   => Binary (CloudEventRec r)
 
 data MkCloudEventArg = MkCloudEventArg
-  { id :: Text
+  { ceId :: Text
   -- ^ Unique identifier for the event that enables event traceability and deduplication
-  , source :: Text -- TODO: Replace with Iri
+  , ceSource :: Text -- TODO: Replace with Iri
 
   -- ^ Identifies where the event originated, such as a system, service, or component. Must be an absolute URI
-  , eventType :: Text
+  , ceEventType :: Text
   -- ^ Describes what kind of event occurred, typically using a domain-specific convention. Event versioning info can be included here [More Info](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/primer.md#the-role-of-the-type-attribute-within-versioning)
-  , dataContentType :: Maybe Text
+  , ceDataContentType :: Maybe Text
   -- ^ Format of the event data (e.g., "application/json") to help receivers parse it correctly. MIME type for the event data
-  , dataSchema :: Maybe Iri
+  , ceDataSchema :: Maybe Iri
   -- ^ Reference to a schema that describes the structure and validation rules for the event data. Must be an absolute URI
-  , subject :: Maybe Text
+  , ceSubject :: Maybe Text
   -- ^ Specific subject or target that the event relates to within the event source's context
-  , time :: Text -- TODO replace with UTCTime
+  , ceTime :: Text -- TODO replace with UTCTime
 
   -- ^ When the event occurred, helping establish chronology in event sequences
   }
@@ -130,18 +130,18 @@ mkCloudEventRec
   -> eventData
   -> extensionAttributesNativeRecord
   -> CloudEventRec (CloudEventRows eventData .+ extensionAttributesRows)
-mkCloudEventRec x eventData extensionAttributesNativeRecord =
+mkCloudEventRec x ceEventData extensionAttributesNativeRecord =
   let extensionAttributesRec = Rec.fromNative extensionAttributesNativeRecord
   in  CloudEventRec
-        $ #ceId .== x.id
-          .+ #ceSource .== x.source
+        $ #ceId .== x.ceId
+          .+ #ceSource .== x.ceSource
           .+ #ceSpecVersion .== ("1.0" :: Text)
-          .+ #ceType .== x.eventType
-          .+ #ceDataContentType .== x.dataContentType
-          .+ #ceDataSchema .== x.dataSchema
-          .+ #ceSubject .== x.subject
-          .+ #ceTime .== x.time
-          .+ #ceData .== eventData
+          .+ #ceType .== x.ceEventType
+          .+ #ceDataContentType .== x.ceDataContentType
+          .+ #ceDataSchema .== x.ceDataSchema
+          .+ #ceSubject .== x.ceSubject
+          .+ #ceTime .== x.ceTime
+          .+ #ceData .== ceEventData
           .+ #ceDataBase64 .== (Nothing :: Maybe Text)
           .+ extensionAttributesRec
 
@@ -186,15 +186,15 @@ ceMultiFocus
   => (Rec u -> f (Rec v)) -> CloudEventRec (u .+ r) -> f (CloudEventRec (v .+ r))
 ceMultiFocus f (CloudEventRec (u :+ r)) = CloudEventRec . (.+ r) <$> f u
 
-exampleEvent :: Rec (CloudEventRows Text)
-exampleEvent =
-  #ceId .== "unique-event-id-12345"
-    .+ #ceSource .== "urn:example:source"
-    .+ #ceSpecVersion .== ("1.0" :: Text)
-    .+ #ceType .== "com.example.custom_event.v1"
-    .+ #ceDataContentType .== Just "application/json"
-    .+ #ceDataSchema .== (Nothing :: Maybe Iri)
-    .+ #ceSubject .== Just "entity-instance-42"
-    .+ #ceTime .== "2023-10-26T12:34:56Z"
-    .+ #ceData .== "Hello World"
-    .+ #ceDataBase64 .== (Nothing :: Maybe Text)
+-- exampleEvent :: Rec (CloudEventRows Text)
+-- exampleEvent =
+--   #ceId .== "unique-event-id-12345"
+--     .+ #ceSource .== "urn:example:source"
+--     .+ #ceSpecVersion .== ("1.0" :: Text)
+--     .+ #ceType .== "com.example.custom_event.v1"
+--     .+ #ceDataContentType .== Just "application/json"
+--     .+ #ceDataSchema .== (Nothing :: Maybe Iri)
+--     .+ #ceSubject .== Just "entity-instance-42"
+--     .+ #ceTime .== "2023-10-26T12:34:56Z"
+--     .+ #ceData .== "Hello World"
+--     .+ #ceDataBase64 .== (Nothing :: Maybe Text)
