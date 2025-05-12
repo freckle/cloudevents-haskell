@@ -109,7 +109,7 @@ toBinaryKafkaMessage topicName cloudEvent =
       , prHeaders = headersFromList kafkaHeadersMapping
       }
 
--- | Converts a CloudEvent to a Kafka message in structured content mode.
+-- | Converts a CloudEvent to a Kafka message in structured content mode AKA JSON.
 --
 -- In structured mode:
 -- * The entire CloudEvent (attributes and data) is serialized as JSON and placed in the Kafka message value
