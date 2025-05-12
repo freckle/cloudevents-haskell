@@ -104,7 +104,7 @@ userCreatedEvent =
       , ceEventType = "com.example.user.created"
       , ceDataContentType = Just "application/json"
       , ceDataSchema = Nothing
-      , ceSubject = Just -- ... (Iri value)
+      , ceSubject = Just "resource123"
       , ceTime = -- ... (UTCTime value)
       }
     UserCreatedEvent
