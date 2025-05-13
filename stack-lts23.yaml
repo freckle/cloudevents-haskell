@@ -1,1 +1,6 @@
-resolver: lts-23.17
+resolver: lts-23.19
+
+extra-deps:
+  - iri-0.5.1.1
+  - text-builder-1.0.0.3
+  - text-builder-core-0.1.1.1

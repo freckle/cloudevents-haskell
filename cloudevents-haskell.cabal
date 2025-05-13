@@ -1,0 +1,81 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.38.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           cloudevents-haskell
+version:        0.1.0.0
+synopsis:       Unofficial Haskell SDK for the CloudEvents specification
+description:    See the README on GitHub at <https://github.com/freckle/cloudevents-haskell#readme>
+category:       Utils
+homepage:       https://github.com/freckle/cloudevents-haskell#readme
+bug-reports:    https://github.com/freckle/cloudevents-haskell/issues
+maintainer:     Freckle Education
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    package.yaml
+extra-doc-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/freckle/cloudevents-haskell
+
+library
+  exposed-modules:
+      CloudEvent.V1.Bindings.Kafka
+      CloudEvent.V1.Event.Data
+      CloudEvent.V1.Event.Internal.Data
+      CloudEvent.V1.Event.Internal.Orphans
+      CloudEvent.V1.Event.Lens
+      CloudEvent.V1.Event.Validation
+  other-modules:
+      Paths_cloudevents_haskell
+  autogen-modules:
+      Paths_cloudevents_haskell
+  hs-source-dirs:
+      src
+  default-extensions:
+      ApplicativeDo
+      DataKinds
+      DeriveAnyClass
+      DerivingStrategies
+      DerivingVia
+      DuplicateRecordFields
+      GADTs
+      LambdaCase
+      NoFieldSelectors
+      NoImplicitPrelude
+      NoMonomorphismRestriction
+      NoPostfixOperators
+      OverloadedRecordDot
+      OverloadedStrings
+      QuasiQuotes
+      TypeFamilies
+  ghc-options: -Weverything -Wno-all-missed-specialisations -Wno-missed-specialisations -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-missing-local-signatures -Wno-monomorphism-restriction -Wno-safe -Wno-unsafe
+  build-depends:
+      aeson
+    , autodocodec
+    , autodocodec-schema
+    , base <5
+    , binary
+    , binary-instances
+    , bytestring
+    , hw-kafka-client
+    , iri
+    , lens
+    , text
+    , time
+  default-language: GHC2021
+  if impl(ghc >= 9.8)
+    ghc-options: -Wno-missing-role-annotations -Wno-missing-poly-kind-signatures
+  if impl(ghc >= 9.2)
+    ghc-options: -Wno-missing-kind-signatures
+  if impl(ghc >= 8.10)
+    ghc-options: -Wno-missing-safe-haskell-mode -Wno-prepositive-qualified-module
+  if impl(ghc >= 8.8)
+    ghc-options: -fwrite-ide-info

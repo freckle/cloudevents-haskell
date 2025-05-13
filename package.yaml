@@ -1,15 +1,11 @@
-name: haskell-library-template
-version: 0.0.0.0
+name: cloudevents-haskell
+version: 0.1.0.0
 maintainer: Freckle Education
 category: Utils
-github: freckle/haskell-library-template
-synopsis: Short synopsis here
-description: |
-  Longer description here
-
-  Haddocks are more valuable if you reproduce the main README example here, but
-  you can also just direct users to the README if you prefer not to take on that
-  duplication burden.
+github: freckle/cloudevents-haskell
+license: BSD-3-Clause
+synopsis: Unofficial Haskell SDK for the CloudEvents specification
+description: See the README on GitHub at <https://github.com/freckle/cloudevents-haskell#readme>
 
 extra-doc-files:
   - README.md
@@ -17,6 +13,11 @@ extra-doc-files:
 
 extra-source-files:
   - package.yaml
+
+language: GHC2021
+
+dependencies:
+  - base < 5
 
 ghc-options:
   - -Weverything
@@ -45,50 +46,44 @@ when:
     ghc-options:
       - -fwrite-ide-info
 
-dependencies:
-  - base < 5
-
 default-extensions:
-  - BangPatterns
+  - ApplicativeDo
   - DataKinds
   - DeriveAnyClass
-  - DeriveFoldable
-  - DeriveFunctor
-  - DeriveGeneric
-  - DeriveLift
-  - DeriveTraversable
   - DerivingStrategies
-  - FlexibleContexts
-  - FlexibleInstances
+  - DerivingVia
+  - DuplicateRecordFields
   - GADTs
-  - GeneralizedNewtypeDeriving
   - LambdaCase
-  - MultiParamTypeClasses
+  - NoFieldSelectors
   - NoImplicitPrelude
   - NoMonomorphismRestriction
+  - NoPostfixOperators
+  - OverloadedRecordDot
   - OverloadedStrings
-  - RankNTypes
-  - RecordWildCards
-  - ScopedTypeVariables
-  - StandaloneDeriving
-  - TypeApplications
+  - QuasiQuotes
   - TypeFamilies
 
 library:
   source-dirs: src
-
-tests:
-  spec:
-    main: Spec.hs
-    source-dirs: test
-    ghc-options: -threaded -rtsopts "-with-rtsopts=-N"
-    dependencies:
-      #- haskell-library-template
-      - hspec
-      - hspec-junit-formatter
-
-  readme:
-    main: README.lhs
-    ghc-options: -pgmL markdown-unlit
-    dependencies:
-      - markdown-unlit
+  dependencies:
+    - aeson
+    - autodocodec
+    - autodocodec-schema
+    - binary
+    - binary-instances
+    - bytestring
+    - hw-kafka-client
+    - iri
+    - lens
+    - text
+    - time
+# tests:
+#   spec:
+#     main: Spec.hs
+#     source-dirs: test
+#     ghc-options: -threaded -rtsopts "-with-rtsopts=-N"
+#     dependencies:
+#       - cloudevents-haskell
+#       - hspec
+#       - hspec-junit-formatter
