@@ -21,8 +21,7 @@ Add the package to your project's dependencies:
 
 ```
 # In your .cabal file
-build-depends:
-  - cloudevents-haskell
+build-depends: cloudevents-haskell
 ```
 
 ### Using Stack
