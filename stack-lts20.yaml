@@ -3,6 +3,7 @@ resolver: lts-20.26
 extra-deps:
   - autodocodec-0.4.2.2
   - autodocodec-schema-0.2.0.1
+  - Cabal-3.14.2.0
   - directory-1.3.9.0
   - file-io-0.1.5
   - filepath-1.4.301.0
@@ -12,22 +13,18 @@ extra-deps:
   - hspec-discover-2.10.0
   - hspec-junit-formatter-1.1.2.1
   - hw-kafka-client-5.3.0
+  - ip-1.7.8
+  - iri-0.5.1.1
+  - parsec-3.1.18.0
   - process-1.6.26.0
   - regex-tdfa-1.3.2.2
-  - row-types-1.0.1.2
-  - iri-0.5.1.1
-  - ip-1.7.8
-  - time-1.12.2
   - text-2.0.2
-  - vector-0.13.2.0
-  - unix-2.8.6.0
-  - wide-word-0.1.7.0
-  # For iri
   - text-builder-1.0.0.3
   - text-builder-core-0.1.1.1
-  # For CI
-  - Cabal-3.14.2.0
-  - parsec-3.1.18.0
+  - time-1.12.2
+  - unix-2.8.6.0
+  - vector-0.13.2.0
+  - wide-word-0.1.7.0
 
 allow-newer-deps:
   - vector
