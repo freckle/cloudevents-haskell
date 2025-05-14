@@ -11,7 +11,7 @@
 --   single message value using the JSON event format.
 --
 -- See: <https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/bindings/kafka-protocol-binding.md>
-module CloudEvent.V1.Bindings.Kafka
+module Freckle.CloudEvent.V1.Bindings.Kafka
   ( KafkaCloudEventExtAttributes (..)
   , toBinaryKafkaMessage
   , toStructuredKafkaMessage
@@ -27,7 +27,7 @@ import Autodocodec
   , requiredField'
   , (.=)
   )
-import CloudEvent.V1.Event.Internal.Data (CloudEvent (..))
+import Freckle.CloudEvent.V1.Event.Internal.Data (CloudEvent (..))
 import Data.Aeson (FromJSON, ToJSON, encode)
 import Data.Binary (Binary)
 import Data.ByteString (ByteString)

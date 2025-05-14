@@ -1,4 +1,4 @@
-module CloudEvent.V1.Event.Data
+module Freckle.CloudEvent.V1.Event.Data
   ( CloudEvent
   , MkCloudEventArg (..)
   , mkCloudEvent
@@ -13,7 +13,7 @@ import Autodocodec
   , HasObjectCodec (objectCodec)
   , object
   )
-import CloudEvent.V1.Event.Internal.Data (CloudEvent (..))
+import Freckle.CloudEvent.V1.Event.Internal.Data (CloudEvent (..))
 import Data.Aeson (FromJSON, ToJSON)
 import Data.Binary (Binary)
 import Data.Text (Text)

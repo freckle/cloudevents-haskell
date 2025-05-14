@@ -1,4 +1,4 @@
-module CloudEvent.V1.Event.Internal.Data
+module Freckle.CloudEvent.V1.Event.Internal.Data
   ( CloudEvent (..)
   ) where
 
@@ -13,7 +13,7 @@ import Autodocodec
   , requiredField'
   , (.=)
   )
-import CloudEvent.V1.Event.Internal.Orphans ()
+import Freckle.CloudEvent.V1.Event.Internal.Orphans ()
 import Data.Aeson (FromJSON, ToJSON)
 import Data.Binary (Binary)
 import Data.Text (Text)

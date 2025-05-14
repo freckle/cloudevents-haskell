@@ -1,9 +1,9 @@
 {-# LANGUAGE TemplateHaskell #-}
 {-# OPTIONS_GHC -Wno-missing-export-lists #-}
 
-module CloudEvent.V1.Event.Lens where
+module Freckle.CloudEvent.V1.Event.Lens where
 
-import CloudEvent.V1.Event.Data (CloudEvent)
+import Freckle.CloudEvent.V1.Event.Data (CloudEvent)
 import Control.Lens (makeLensesFor)
 
 makeLensesFor

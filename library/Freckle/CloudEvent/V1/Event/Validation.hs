@@ -1,6 +1,6 @@
 {-# LANGUAGE AllowAmbiguousTypes #-}
 
-module CloudEvent.V1.Event.Validation
+module Freckle.CloudEvent.V1.Event.Validation
   ( isValidCloudEvent
   ) where
 
@@ -8,7 +8,7 @@ import Prelude
 
 import Autodocodec (HasCodec, HasObjectCodec)
 import Autodocodec.Schema (jsonSchemaViaCodec, validateAccordingTo)
-import CloudEvent.V1.Event.Data (CloudEvent)
+import Freckle.CloudEvent.V1.Event.Data (CloudEvent)
 import Data.Aeson (Value)
 import Data.Kind (Type)
 

@@ -27,18 +27,18 @@ source-repository head
 
 library
   exposed-modules:
-      CloudEvent.V1.Bindings.Kafka
-      CloudEvent.V1.Event.Data
-      CloudEvent.V1.Event.Internal.Data
-      CloudEvent.V1.Event.Internal.Orphans
-      CloudEvent.V1.Event.Lens
-      CloudEvent.V1.Event.Validation
+      Freckle.CloudEvent.V1.Bindings.Kafka
+      Freckle.CloudEvent.V1.Event.Data
+      Freckle.CloudEvent.V1.Event.Internal.Data
+      Freckle.CloudEvent.V1.Event.Internal.Orphans
+      Freckle.CloudEvent.V1.Event.Lens
+      Freckle.CloudEvent.V1.Event.Validation
   other-modules:
       Paths_cloudevents_haskell
   autogen-modules:
       Paths_cloudevents_haskell
   hs-source-dirs:
-      src
+      library
   default-extensions:
       ApplicativeDo
       DataKinds
