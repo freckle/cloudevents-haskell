@@ -13,11 +13,11 @@ import Autodocodec
   , requiredField'
   , (.=)
   )
-import Freckle.CloudEvent.V1.Event.Internal.Orphans ()
 import Data.Aeson (FromJSON, ToJSON)
 import Data.Binary (Binary)
 import Data.Text (Text)
 import Data.Time (UTCTime)
+import Freckle.CloudEvent.V1.Event.Internal.Orphans ()
 import GHC.Generics (Generic)
 import Iri.Data (Iri)
 

@@ -8,9 +8,9 @@ import Prelude
 
 import Autodocodec (HasCodec, HasObjectCodec)
 import Autodocodec.Schema (jsonSchemaViaCodec, validateAccordingTo)
-import Freckle.CloudEvent.V1.Event.Data (CloudEvent)
 import Data.Aeson (Value)
 import Data.Kind (Type)
+import Freckle.CloudEvent.V1.Event.Data (CloudEvent)
 
 -- | Validates that a JSON value conforms to a specific CloudEvents specification.
 --  Requires the event data type and extension attributes to be specified as type applications with the event data type first.

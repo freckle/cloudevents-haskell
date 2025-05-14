@@ -13,11 +13,11 @@ import Autodocodec
   , HasObjectCodec (objectCodec)
   , object
   )
-import Freckle.CloudEvent.V1.Event.Internal.Data (CloudEvent (..))
 import Data.Aeson (FromJSON, ToJSON)
 import Data.Binary (Binary)
 import Data.Text (Text)
 import Data.Time (UTCTime)
+import Freckle.CloudEvent.V1.Event.Internal.Data (CloudEvent (..))
 import GHC.Generics (Generic)
 import Iri.Data (Iri)
 

@@ -3,8 +3,8 @@
 
 module Freckle.CloudEvent.V1.Event.Lens where
 
-import Freckle.CloudEvent.V1.Event.Data (CloudEvent)
 import Control.Lens (makeLensesFor)
+import Freckle.CloudEvent.V1.Event.Internal.Data (CloudEvent)
 
 makeLensesFor
   [ ("ceId", "_ceId")
