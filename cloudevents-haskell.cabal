@@ -5,7 +5,7 @@ cabal-version: 2.2
 -- see: https://github.com/sol/hpack
 
 name:           cloudevents-haskell
-version:        0.1.0.0
+version:        0.2.0.0
 synopsis:       Unofficial Haskell SDK for the CloudEvents specification
 description:    See the README on GitHub at <https://github.com/freckle/cloudevents-haskell#readme>
 category:       Utils
@@ -27,18 +27,18 @@ source-repository head
 
 library
   exposed-modules:
-      CloudEvent.V1.Bindings.Kafka
-      CloudEvent.V1.Event.Data
-      CloudEvent.V1.Event.Internal.Data
-      CloudEvent.V1.Event.Internal.Orphans
-      CloudEvent.V1.Event.Lens
-      CloudEvent.V1.Event.Validation
+      Freckle.CloudEvent.V1.Bindings.Kafka
+      Freckle.CloudEvent.V1.Event.Data
+      Freckle.CloudEvent.V1.Event.Internal.Data
+      Freckle.CloudEvent.V1.Event.Internal.Orphans
+      Freckle.CloudEvent.V1.Event.Lens
+      Freckle.CloudEvent.V1.Event.Validation
   other-modules:
       Paths_cloudevents_haskell
   autogen-modules:
       Paths_cloudevents_haskell
   hs-source-dirs:
-      src
+      library
   default-extensions:
       ApplicativeDo
       DataKinds
