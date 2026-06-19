@@ -1,5 +1,5 @@
 name: cloudevents-haskell
-version: 0.1.0.0
+version: 0.2.0.0
 maintainer: Freckle Education
 category: Utils
 github: freckle/cloudevents-haskell
@@ -65,7 +65,7 @@ default-extensions:
   - TypeFamilies
 
 library:
-  source-dirs: src
+  source-dirs: library
   dependencies:
     - aeson
     - autodocodec
