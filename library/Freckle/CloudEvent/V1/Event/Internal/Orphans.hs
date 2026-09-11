@@ -1,7 +1,7 @@
 {-# OPTIONS_GHC -Wno-missing-export-lists #-}
 {-# OPTIONS_GHC -Wno-orphans #-}
 
-module CloudEvent.V1.Event.Internal.Orphans where
+module Freckle.CloudEvent.V1.Event.Internal.Orphans where
 
 import Prelude
 
