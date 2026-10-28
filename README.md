@@ -1,5 +1,8 @@
 # CloudEvents Haskell SDK
 
+> [!WARNING]
+> This repository is archived and no longer maintained.
+
 An unofficial Haskell SDK for the [CloudEvents](https://cloudevents.io/) specification, particularly for version 1.0.2 of the spec. ([JSON Schema](https://github.com/cloudevents/spec/blob/v1.0.2/cloudevents/formats/cloudevents.json))
 
 ## Overview
